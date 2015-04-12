@@ -1,0 +1,20 @@
+2015/04/12 18:28:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index?r=gii".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index?r=gii')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index?r=gii')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index?r=gi...')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/comercio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/comercio/index.php?r=site/index?r=gii
+---
+2015/04/12 18:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('user')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('user')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/comercio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/comercio/index.php?r=site/user
+---
