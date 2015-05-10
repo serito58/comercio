@@ -26,24 +26,60 @@
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 	</div><!-- header -->
 
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
+	<!<div id="mainmenu">
+		<?php /*$this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'Proveedores', 'url'=>array('/proveedor/index')),
+				array('label'=>'Viajante', 'url'=>array('/viajante/index')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
-		)); ?>
+		)); */?>
 	</div><!-- mainmenu -->
+        
+        <?php $this->widget('application.extensions.mbmenu.MbMenu',array(
+            'items'=>array(
+                array('label'=>'Home', 'url'=>array('/site/index')),
+                array('label'=>'Proveedores', 'url'=>array('/proveedor/index'),
+                  'items'=>array(
+                    array('label'=>'Crear Proveedor','url'=>array('/proveedor/create')),
+                    array('label'=>'Admin Proveedor','url'=>array('/proveedor/admin')),
+                  ),
+                ),
+                array('label'=>'Viajantes', 'url'=>array('/viajante/index'),
+                  'items'=>array(
+                    array('label'=>'Crear Viajante','url'=>array('/viajante/create')),
+                    array('label'=>'Admin Viajante','url'=>array('/viajante/admin')),
+                  ),
+                ),
+                array('label'=>'Viajantes', 'url'=>array('/viajante/index'),
+                  'items'=>array(
+                    array('label'=>'Crear Viajante','url'=>array('/viajante/create')),
+                    array('label'=>'Admin Viajante','url'=>array('/viajante/admin')),
+                  ),
+                ),
+                array('label'=>'Test',
+                  'items'=>array(
+                    array('label'=>'Sub 1', 'url'=>array('/site/page','view'=>'sub1')),
+                    array('label'=>'Sub 2',
+                      'items'=>array(
+                        array('label'=>'Sub sub 1', 'url'=>array('/site/page','view'=>'subsub1')),
+                        array('label'=>'Sub sub 2', 'url'=>array('/site/page','view'=>'subsub2')),
+                      ),
+                    ),
+                  ),
+                ),
+            ),
+    )); ?>
+        
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
+		));?><!-- breadcrumbs -->
 	<?php endif?>
 
-	<?php echo $content; ?>
+	<?php echo $content; ?><!--Termina mainmenu-->
 
 	<div class="clear"></div>
 

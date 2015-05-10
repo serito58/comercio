@@ -40,3 +40,272 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/comercio/index.php?r=clientes
 ---
+2015/04/17 21:01:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('user')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('user')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/comercio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/comercio/index.php?r=site/user
+---
+2015/04/22 17:03:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/comercio/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/comercio/index.php?r=admin
+---
+2015/05/05 11:46:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'comercio.proveedores' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `proveedores`.
+in /var/www/comercio/index.php (13)
+2015/05/06 17:40:13 [error] [exception.CException] exception 'CException' with message 'ProveedoresController cannot find the requested view "index".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/comercio/protected/controllers/ProveedoresController.php(6): CController->render('index')
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ProveedoresController->actionIndex()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('proveedores/ind...')
+#8 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/comercio/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/comercio/index.php?r=proveedores/index
+---
+2015/05/06 17:43:43 [error] [exception.CException] exception 'CException' with message 'ProveedoresController cannot find the requested view "index".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/comercio/protected/controllers/ProveedoresController.php(6): CController->render('index')
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ProveedoresController->actionIndex()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('proveedores')
+#8 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/comercio/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/comercio/index.php?r=proveedores
+---
+2015/05/06 17:49:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'comercio.Proveedores' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Proveedores`.
+in /var/www/comercio/protected/controllers/ProveedoresController.php (7)
+in /var/www/comercio/index.php (13)
+2015/05/06 17:49:03 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Proveedores" for active record class "Proveedores" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Proveedores))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 /var/www/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/comercio/protected/controllers/ProveedoresController.php(7): CActiveRecord->findAll()
+#5 /var/www/yii/framework/web/actions/CInlineAction.php(49): ProveedoresController->actionIndex()
+#6 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('proveedores')
+#11 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/comercio/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/comercio/index.php?r=proveedores
+---
+2015/05/06 17:51:04 [error] [php] include(proveedores.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/comercio/protected/controllers/ProveedoresController.php(6): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): ProveedoresController->actionIndex()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): ProveedoresController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): ProveedoresController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): ProveedoresController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/comercio/index.php(13): CWebApplication->run()
+REQUEST_URI=/comercio/index.php?r=proveedores
+in /var/www/comercio/protected/controllers/ProveedoresController.php (6)
+in /var/www/comercio/index.php (13)
+2015/05/06 17:51:10 [error] [php] include(proveedores.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/comercio/protected/controllers/ProveedoresController.php(6): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): ProveedoresController->actionIndex()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): ProveedoresController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): ProveedoresController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): ProveedoresController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/comercio/index.php(13): CWebApplication->run()
+REQUEST_URI=/comercio/index.php?r=proveedores
+in /var/www/comercio/protected/controllers/ProveedoresController.php (6)
+in /var/www/comercio/index.php (13)
+2015/05/06 18:09:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'comercio.Proveedores' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Proveedores`.
+in /var/www/comercio/protected/controllers/ProveedoresController.php (7)
+in /var/www/comercio/index.php (13)
+2015/05/06 18:09:54 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Proveedores" for active record class "Proveedores" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Proveedores))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 /var/www/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/comercio/protected/controllers/ProveedoresController.php(7): CActiveRecord->findAll()
+#5 /var/www/yii/framework/web/actions/CInlineAction.php(49): ProveedoresController->actionIndex()
+#6 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#10 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('proveedores')
+#11 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/comercio/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/comercio/index.php?r=proveedores
+---
+2015/05/06 20:14:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('admin')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('proveedores/adm...')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/comercio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/comercio/index.php?r=proveedores/admin
+---
+2015/05/09 22:38:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "proveedor".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('proveedor')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('proveedor')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/proveedor')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/comercio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/comercio/index.php?r=site/proveedor
+HTTP_REFERER=http://localhost/comercio/index.php
+---
+2015/05/09 22:38:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viajante".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('viajante')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('viajante')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/viajante')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/comercio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/comercio/index.php?r=site/viajante
+HTTP_REFERER=http://localhost/comercio/index.php?r=site/proveedor
+---
+2015/05/09 22:38:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "proveedor".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('proveedor')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('proveedor')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/proveedor')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/comercio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/comercio/index.php?r=site/proveedor
+HTTP_REFERER=http://localhost/comercio/index.php?r=site/viajante
+---
+2015/05/09 22:39:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "proveedor".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('proveedor')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('proveedor')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/proveedor')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/comercio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/comercio/index.php?r=site/proveedor
+HTTP_REFERER=http://localhost/comercio/index.php?r=site/proveedor
+---
+2015/05/09 22:39:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "viajante/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('viajante/index')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/comercio/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/comercio/index.php?r=viajante/index
+HTTP_REFERER=http://localhost/comercio/index.php?r=site/proveedor
+---
+2015/05/09 22:40:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "viajante/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('viajante/index')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/comercio/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/comercio/index.php?r=viajante/index
+HTTP_REFERER=http://localhost/comercio/index.php?r=proveedor/index
+---
+2015/05/09 22:40:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "viajante/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('viajante/index')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/comercio/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/comercio/index.php?r=viajante/index
+HTTP_REFERER=http://localhost/comercio/index.php?r=proveedor/index
+---
+2015/05/09 23:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "sub1" was not found.' in /var/www/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('sub1')
+#1 /var/www/yii/framework/web/actions/CAction.php(76): CViewAction->run()
+#2 /var/www/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/comercio/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/comercio/index.php?r=site/page&view=sub1
+HTTP_REFERER=http://localhost/comercio/index.php?r=viajante/admin
+---
+2015/05/10 00:04:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('proveedor/updat...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/comercio/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/comercio/index.php?r=proveedor/update
+HTTP_REFERER=http://localhost/comercio/index.php?r=proveedor/create
+---
+2015/05/10 00:04:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('proveedor/updat...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/comercio/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/comercio/index.php?r=proveedor/update
+HTTP_REFERER=http://localhost/comercio/index.php?r=proveedor/update
+---
+2015/05/10 00:04:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('proveedor/updat...')
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/comercio/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/comercio/index.php?r=proveedor/update
+---
